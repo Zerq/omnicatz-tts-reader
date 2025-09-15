@@ -1,0 +1,216 @@
+:root {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    color: white;
+    --pageBg: black;
+    --fore: rgb(87, 49, 0);
+    --back: gold;
+    --back2: rgb(189, 173, 77);
+    --backDarkestGold: #333;
+    --border: 0.05rem;
+    --borderR: 0.5rem;
+    --gradient: linear-gradient(49deg, rgba(136, 63, 7, 1) 0%, rgba(98, 46, 0, 1) 11%, rgba(0, 0, 0, 1) 17%, rgba(147, 69, 0, 1) 20%, rgba(31, 12, 0, 1) 36%, rgba(156, 68, 21, 1) 39%, rgba(3, 1, 0, 1) 67%, rgba(64, 25, 0, 1) 70%, rgba(41, 17, 2, 1) 100%);
+    background-color: var(--pageBg);
+}
+
+.HomeView>div {
+    display: flex;
+    justify-content: center;
+}
+
+.HomeView>div>button {
+    margin: 0.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav.controlls>* {
+    padding: 0.2rem;
+    margin-inline: 0.2rem;
+     margin-block: 0.25rem;
+}
+
+
+nav.controlls>button,
+.pages>button {
+    border: 0;
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+}
+
+nav.controlls {
+
+    .title {
+        background-color: white;
+        color: black;
+        padding: 0.5rem;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    select {
+
+        border: 0;
+    }
+
+    .play {
+        padding-left: 0.2rem;
+        margin-left: 0.2rem;
+           margin-block: 0.25rem;
+    }
+
+
+    .eject {
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+        padding-right: 0.2rem;
+        margin-block: 0.25rem;
+    }
+
+
+    width: calc(100% - 1rem);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem;
+
+
+    .pages>span {
+        margin-inline: 0.3rem;
+    }
+
+    .pages {
+        display: flex;
+        flex: 0;
+        color: black;
+        background-color: white;
+
+        span {
+            align-content: center;
+        }
+    }
+}
+
+
+.ViewComponent {
+    display: contents;
+}
+
+.navMenu {
+    header {
+        width: calc(100% - (var(--border) * 2) - 1rem);
+
+        ul {
+            margin-block-start: 1rem;
+            margin-block-end: 1rem;
+        }
+    }
+}
+
+
+article {
+    margin: 0.5rem;
+
+    p {
+        padding-block: 1rem;
+    }
+}
+
+
+header {
+    background-color: var(--back);
+    border: solid var(--border) var(--fore);
+    color: var(--fore);
+
+    h1 {
+        margin-inline: 1rem;
+        user-select: none;
+        text-shadow: 1px 1px var(--back);
+        color: var(--fore) !important;
+        font-size: larger;
+    }
+
+    border-radius: var(--borderR);
+
+    nav {
+        user-select: none;
+
+        li {
+            cursor: pointer;
+
+            a {
+                text-shadow: 1px 1px var(--back);
+                color: var(--fore) !important;
+            }
+        }
+    }
+}
+
+main {
+    background-color: var(--backDarkestGold);
+    border: solid var(--border) var(--fore);
+    color: white;
+    border-radius: var(--borderR);
+
+    width: calc(100vw - 2rem);
+}
+
+@media (pointer:none),
+(pointer:coarse) {
+
+    article > p {
+                font-size: xx-large;
+    }
+    .controlls {
+        display: flex;
+        flex-direction: column;
+          font-size:5rem;
+
+
+        .pages>* {
+            flex: auto
+        }
+
+
+        .pages>button {
+                background-color: #76a4c88b;
+          
+            padding: 0.2rem;
+        }
+
+        .pages>span {
+            flex: 0;
+        }
+    }
+
+    .controlls>* {
+        border-radius: 0.25rem;
+        padding: 0.2rem;
+        margin: 0.2rem;
+
+
+    }
+
+    .controlls>button {
+      background-color: rgba(255, 166, 0, 0.549);
+        padding: 0.2rem;
+    }
+
+
+    nav.controlls {
+        flex-wrap: nowrap;
+    }
+nav.controlls {
+    select {
+ 
+        font-size: xxx-large;
+    }
+}
+
+}

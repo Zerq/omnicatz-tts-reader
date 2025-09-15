@@ -1,0 +1,33 @@
+.TabView {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: var(--back);
+    color: var(--fore);
+
+    ul {
+        margin: 0rem;
+        padding: 0rem;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--pageBg);
+
+
+        li {
+            width: fit-content;
+            padding: 0.4rem;
+            background-color: var(--back2);
+            border-radius: 0.5rem;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    }
+
+    .selected {
+        background-color: var(--back);
+    }
+
+}
